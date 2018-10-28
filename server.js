@@ -9,13 +9,12 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }))
 app.use(cors());
 
-var config = require('./server_config/config');
-var model = require('./server_models/model');
+var {connection} = require('./server_config/config');
 
-var connection = config.connection;
+var actions = require('./server_action/Action');
 
 app.get('/', function (req,res) {
-    res.send('hola esto es un get');
+    res.send(actions.action(req.query.action));
     res.end();
 })
 
