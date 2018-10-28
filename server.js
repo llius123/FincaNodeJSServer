@@ -14,19 +14,23 @@ var model = require('./server_models/model');
 
 var connection = config.connection;
 
-//Creo el objeto conexion y el objeto cerrar conexcion
-// var mysq_config = model.connect_disconnect;
-// mysq_config = {
-//     'connect': config.connection.connect(),
-//     'disconnect': config.connection.end()
-// }
-// mysq_config.connect = config.connection.connect();
-// mysq_config.disconnect = config.connection.end();
-
-app.post('/', function (req, res) {
-    console.log(req.body);
-    res.send(req.body);
+app.get('/', function (req,res) {
+    res.send('hola esto es un get');
     res.end();
 })
 
+app.post('/', function (req, res) {
+    res.send('hola esto es un post');
+    res.end();
+})
+
+app.put('/', function (req, res) {
+    res.send('hola esto es un put');
+    res.end();
+})
+
+app.delete('/', function (req, res) {
+    res.send('hola esto es un delete');
+    res.end();
+})
 app.listen(3000)
