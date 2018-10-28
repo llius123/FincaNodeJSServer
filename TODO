@@ -7,3 +7,5 @@ TODO:
         https://github.com/expressjs/cors
         ✔ Nodemon @done(18-10-28 16:00)
         https://nodemon.io/
+        ✔ Body-parser @done(18-10-28 16:57)
+        https://github.com/expressjs/body-parser
