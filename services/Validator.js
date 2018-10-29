@@ -22,11 +22,12 @@ module.exports.validator = function (data) {
                 break;
         }
     }
-    if (arrayFinal[0] !== true) {
-        return arrayFinal;
-    } else {
-        return true;
+    for(i = 0; i< arrayFinal.length; i++){
+        if(arrayFinal[i][0] !== true){
+            return arrayFinal;
+        }
     }
+    return true;
 }
 
 function regexTest(obj, regex, error) {
