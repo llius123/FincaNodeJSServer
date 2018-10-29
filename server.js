@@ -11,7 +11,7 @@ app.use(cors());
 
 var {connection} = require('./server_config/config');
 
-var { factory_action} = require('./server_action/Action');
+var { factory_action} = require('./server_action/Factory_Action');
 
 //Ejemplo url: localhost:3000/?action=CREATE
 app.get('/', function (req,res) {

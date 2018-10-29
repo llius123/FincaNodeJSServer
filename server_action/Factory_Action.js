@@ -1,6 +1,6 @@
 var { actions } = require('../server_models/Model');
 var { query_array } = require('../services/Query_Array');
-var { factory_tables } = require('../server_action/Table');
+var { factory_tables } = require('../server_action/Factory_Table');
 
 module.exports.factory_action = function (res, query, body) {
 

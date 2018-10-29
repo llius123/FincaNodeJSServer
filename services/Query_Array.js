@@ -1,3 +1,5 @@
+var {validator} = require('./Validator');
+
 module.exports.query_array = function (data){
     var array = [];
     var object = [];
@@ -14,5 +16,6 @@ module.exports.query_array = function (data){
             }
         }
     );
+    validator(array);
     return array;
 }
