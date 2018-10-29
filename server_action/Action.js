@@ -1,26 +1,13 @@
 var { actions } = require('../server_models/Model');
-
+var { query_array } = require('../services/Query_Array');
 var { factory_tables } = require('../server_action/Table');
 
 module.exports.factory_action = function (res, query, body) {
-    var array = [];
-    var object = {key: null, value: null};
+
     switch (query.action) {
         case actions.get:
-            array = [];
-            Object.entries(query).forEach(
-                ([key, value]) => {
-                    console.log(key, value)
-                    if(key !== 'action' && key !== 'table'){
-                        object = [
-                            key,
-                            value
-                        ]
-                        array.push(object);
-                    }
-                }   
-            );
-            console.log(array);
+            var resu = query_array(query);
+            console.log(resu);
             //factory_tables(query.action,query.table,);
             res.send();
             res.end();
