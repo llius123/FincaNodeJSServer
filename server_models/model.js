@@ -1,7 +1,19 @@
 var actions = {
-    CREATE: 'CREATE',
-    DELETE: 'DELETE',
-    EDIT: 'EDIT'
+    create: 'create',
+    delete: 'delete',
+    put: 'put',
+    get: 'get'
+}
+
+var tables = {
+    actions: 'actions',
+    usuario: 'usuario',
+    acta: 'acta',
+    factura: 'factura',
+    incidencia: 'incidencia',
+    noticia: 'noticia',
+    tipo_factura: 'tipo_factura',
+    tipo_usuario: 'tipo_usuario'
 }
 
 var usuario = {
@@ -11,7 +23,7 @@ var usuario = {
     puerta: null,
     usuario: null,
     contrasenya: null,
-    tipo_id
+    tipo_id: null
 }
 
 var acta = {
@@ -53,6 +65,7 @@ var tipo_usuario = {
 
 module.exports = {
     actions: actions,
+    tables: tables,
     usuario: usuario,
     acta: acta,
     factura: factura,

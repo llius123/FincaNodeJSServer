@@ -15,13 +15,12 @@ var { factory_action} = require('./server_action/Action');
 
 //Ejemplo url: localhost:3000/?action=CREATE
 app.get('/', function (req,res) {
-    res.send(factory_action(req.query.action,null));
-    res.end();
+    factory_action(res, req.query);
 })
 
 app.post('/', function (req, res) {
-    res.send(action(req.query.action, req.body));
-    res.end();
+    factory_action(res, req.query, req.body);
+    
 })
 
 app.put('/', function (req, res) {
