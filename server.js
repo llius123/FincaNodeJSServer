@@ -11,11 +11,11 @@ app.use(cors());
 
 var {connection} = require('./server_config/config');
 
-var {action} = require('./server_action/Action');
+var { factory_action} = require('./server_action/Action');
 
 //Ejemplo url: localhost:3000/?action=CREATE
 app.get('/', function (req,res) {
-    res.send(action(req.query.action,null));
+    res.send(factory_action(req.query.action,null));
     res.end();
 })
 
