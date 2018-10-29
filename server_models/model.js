@@ -63,6 +63,13 @@ var tipo_usuario = {
     tipo: null
 }
 
+var validacion_model = {
+    id: 'id',
+    fecha: 'fecha',
+    tipo: 'tipo',
+    email: 'email'
+}
+
 module.exports = {
     actions: actions,
     tables: tables,
@@ -72,5 +79,6 @@ module.exports = {
     incidencia: incidencia,
     noticia: noticia,
     tipo_factura: tipo_factura,
-    tipo_usuario: tipo_usuario
+    tipo_usuario: tipo_usuario,
+    validacion_model: validacion_model
 }

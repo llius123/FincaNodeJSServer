@@ -7,7 +7,6 @@ module.exports.factory_action = function (res, query, body) {
     switch (query.action) {
         case actions.get:
             var resu = query_array(query);
-            console.log(resu);
             //factory_tables(query.action,query.table,);
             res.send();
             res.end();

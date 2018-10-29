@@ -6,7 +6,6 @@ module.exports.query_array = function (data){
     array = [];
     Object.entries(data).forEach(
         ([key, value]) => {
-            console.log(key, value)
             if (key !== 'action' && key !== 'table') {
                 object = [
                     key,

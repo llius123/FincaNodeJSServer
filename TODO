@@ -11,6 +11,11 @@ TODO:
         https://github.com/expressjs/body-parser
 
     Que hacer:
+        ✔ Query_Arrays @done(18-10-29 10:46)
+        Me saca en un arraylist todos los parametros que necesto validar
+        ☐ Validator
+
+        ☐ Para validar los tipos hay que sacar funciones que dependan del getcount de la base de datos ya que tengo que validar que sean solo numeros y ademas que esos numeros existan en la base de datos
         ☐ Hacer las factorias
         ☐ Usar la libreria de cookies
         ✔ Crear los modelos @done(18-10-29 09:08)
