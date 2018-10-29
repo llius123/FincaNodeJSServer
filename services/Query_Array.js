@@ -1,6 +1,6 @@
-var {validator} = require('./Validator');
+var { validator } = require('./Validator');
 
-module.exports.query_array = function (data){
+module.exports.query_array = function (data) {
     var array = [];
     var object = [];
     array = [];
@@ -15,6 +15,6 @@ module.exports.query_array = function (data){
             }
         }
     );
-    validator(array);
+    console.log(validator(array));
     return array;
 }

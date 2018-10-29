@@ -11,7 +11,7 @@ module.exports.validator = function (data) {
         var obj = data[i][1];
         switch (data[i][0]) {
             case validacion_model.id:
-            arrayFinal.push(regexTest(obj, regexOnlyNumber, validacion_model.id));
+                arrayFinal.push(regexTest(obj, regexOnlyNumber, validacion_model.id));
                 break;
             case validacion_model.tipo:
                 arrayFinal.push(regexTest(obj, regexOnlyNumber, validacion_model.tipo));
@@ -22,10 +22,14 @@ module.exports.validator = function (data) {
                 break;
         }
     }
-    console.log(arrayFinal);
+    if (arrayFinal[0] !== true) {
+        return arrayFinal;
+    } else {
+        return true;
+    }
 }
 
-function regexTest(obj, regex, error){
+function regexTest(obj, regex, error) {
     res = [];
     if (regex.test(obj)) {
         res = [regex.test(obj)];
