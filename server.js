@@ -13,9 +13,12 @@ var {connection} = require('./server_config/config');
 
 var { factory_action} = require('./server_action/Factory_Action');
 
+var { setReqRes } = require('./services/Req_Res');
+
 //Ejemplo url: localhost:3000/?action=CREATE
 app.get('/', function (req,res) {
-    factory_action(res, req.query);
+    setReqRes(req,res);
+    factory_action(req.query);
 })
 
 app.post('/', function (req, res) {

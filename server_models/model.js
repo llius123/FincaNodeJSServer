@@ -8,7 +8,7 @@ var actions = {
 var tables = {
     actions: 'actions',
     usuario: 'usuario',
-    acta: 'acta',
+    actas: 'actas',
     factura: 'factura',
     incidencia: 'incidencia',
     noticia: 'noticia',
@@ -70,6 +70,11 @@ var validacion_model = {
     email: 'email'
 }
 
+var errorMsg = {
+    status: null,
+    msg: null
+}
+
 module.exports = {
     actions: actions,
     tables: tables,
@@ -80,5 +85,6 @@ module.exports = {
     noticia: noticia,
     tipo_factura: tipo_factura,
     tipo_usuario: tipo_usuario,
-    validacion_model: validacion_model
+    validacion_model: validacion_model,
+    errorMsg: errorMsg
 }

@@ -1,5 +1,9 @@
 var { validator } = require('./Validator');
 
+var { getRes } = require('./Req_Res');
+
+var { errorMsg } = require('../server_models/Model');
+
 module.exports.query_array = function (data) {
     var array = [];
     var object = [];
@@ -13,17 +17,19 @@ module.exports.query_array = function (data) {
         }
     );
     var resultadoValidator = validator(array);
-    var msgError = [];
+    var arrayMsgError = [];
     if (resultadoValidator !== true){       
         for (i = 0; i < resultadoValidator.length; i++){
             if (resultadoValidator[i][0] !== true){
-                msgError.push(resultadoValidator[i][0]);
+                arrayMsgError.push(resultadoValidator[i][0]);
             }
         }
-        //Aqui tengo que llamar al metodo de errores y generar un error
-        return msgError;
-    }else{
-        //Aqui llamaria al metodo de enviar datos correctos
-        return array
+        errorMsg = {
+            status: 500,
+            msg: arrayMsgError
+        }
+        var res = getRes();
+        res.send(errorMsg);
+        res.end();
     }
 }
