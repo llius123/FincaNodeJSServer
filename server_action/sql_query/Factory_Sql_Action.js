@@ -9,5 +9,7 @@ module.exports.factory_sql_action = function (action, table, data) {
             return insert(table, data);
         case actions.delete:
             return del(table, data);
+        case actions.update:
+            return 
     }
 }
