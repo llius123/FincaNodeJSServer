@@ -24,3 +24,7 @@ module.exports.insert = function (table, data) {
             break;
     }
 }
+
+module.exports.del = function (table, data){
+    return `DELETE ${table} where id = ${data.id}`;
+}
