@@ -8,11 +8,11 @@ module.exports.factory_action = function (query, body) {
             query_array(query);
             factory_tables(query.action, query.table, query);
             break;
-        case actions.put:
+        case actions.update:
             break;
         case actions.delete:
             break;
-        case actions.create:
+        case actions.insert:
             break;
         default:
             break;

@@ -10,7 +10,7 @@ TODO:
         ✔ Body-parser @done(18-10-28 16:57)
         https://github.com/expressjs/body-parser
         ☐ Knex
-        Usarlo para evitar las iyecciones de codigo
+        Usarlo para evitar las inyecciones de codigo
         +info --> https://knexjs.org/
 
     Que hacer:
@@ -22,10 +22,12 @@ TODO:
                 ✔ id @done(18-10-29 11:19)
                 ✔ tipo @done(18-10-29 11:19)
                 ✔ fecha (yyyy-mm-dd o yyyy-m-d) @done(18-10-29 11:19)
+        ☐ Hacer factosy_sql_action
+
         ☐ Crear un metodo de envio de mensajes correctos con la respuesta de la sql y otro para mensajes de error
         //Llamar a los metodos de envio de mensjaes en Query_Array. Mas info en el metodo
         ☐ Para validar los tipos hay que sacar funciones que dependan del getcount de la base de datos ya que tengo que validar que sean solo numeros y ademas que esos numeros existan en la base de datos
         ☐ Hacer las factorias
         ☐ Usar la libreria de cookies
         ✔ Crear los modelos @done(18-10-29 09:08)
-        ☐ Saber exactamente que entra por el get/post/delete/put
+        ☐ Saber exactamente que entra por el get/post/delete/update

@@ -1,7 +1,7 @@
 var actions = {
-    create: 'create',
+    insert: 'insert',
     delete: 'delete',
-    put: 'put',
+    update: 'update',
     get: 'get'
 }
 
