@@ -25,8 +25,8 @@ TODO:
                 ✔ tipo @done(18-10-29 11:19)
                 ✔ fecha (yyyy-mm-dd o yyyy-m-d) @done(18-10-29 11:19)
 
-        ☐ Validacion estructura
-                ☐ Acta
+        Validacion estructura:
+                ✔ Acta @done(18-10-30 10:53)
                     ✔ get @done(18-10-30 10:25)
                         OK-mensaje bien
                         BAD-mensaje bien
@@ -41,7 +41,7 @@ TODO:
                         BAD-mensaje bien
         ☐ Si la accion no existe enviar un mensaje de error
         ☐ Hacer factosy_sql_action
-
+        ☐ Revisar Facotry_Sql_Action porque me da la sensacion de que sobra.
         ☐ Crear un metodo de envio de mensajes correctos con la respuesta de la sql y otro para mensajes de error
         //Llamar a los metodos de envio de mensjaes en Query_Array. Mas info en el metodo
         ☐ Para validar los tipos hay que sacar funciones que dependan del getcount de la base de datos ya que tengo que validar que sean solo numeros y ademas que esos numeros existan en la base de datos

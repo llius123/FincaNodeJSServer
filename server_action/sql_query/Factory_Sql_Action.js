@@ -1,6 +1,7 @@
 var { get, insert, del, update } = require('./Factory_Sql_Querys');
 
 var { actions } = require('../../server_models/Model');
+
 module.exports.factory_sql_action = function (action, table, data) {
     switch (action) {
         case actions.get:
