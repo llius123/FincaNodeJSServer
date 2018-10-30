@@ -32,11 +32,11 @@ module.exports.factory_tables = function (action,table,data) {
 var { connection } = require('../server_config/Config');
 var { getRes } = require('../services/Req_Res');
 function consulta(sql){
-    connection.connect();
+    //connection.connect();
     connection.query(sql , function (error, results, fields) {
         if (error) getRes().send(error);
         getRes().send(results);
         getRes().end();
     })
-    connection.end();
+    //connection.end();
 }

@@ -22,17 +22,18 @@ app.get('/', function (req,res) {
 })
 
 app.post('/', function (req, res) {
-    factory_action(res, req.query, req.body);
+    setReqRes(req, res);
+    factory_action(req.query, req.body);
     
 })
 
 app.put('/', function (req, res) {
-    res.send('hola esto es un put');
-    res.end();
+    setReqRes(req, res);
+    factory_action(req.query, req.body);
 })
 
 app.delete('/', function (req, res) {
-    res.send('hola esto es un delete');
-    res.end();
+    setReqRes(req, res);
+    factory_action(req.query, req.body);
 })
 app.listen(3000)

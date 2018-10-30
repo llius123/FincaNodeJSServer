@@ -12,6 +12,8 @@ TODO:
         ☐ Knex
         Usarlo para evitar las inyecciones de codigo
         +info --> https://knexjs.org/
+        ☐ mysql-sesion
+        https://www.npmjs.com/package/express-mysql-session
 
     Que hacer:
         ✔ Query_Arrays @done(18-10-29 10:46)
@@ -22,6 +24,22 @@ TODO:
                 ✔ id @done(18-10-29 11:19)
                 ✔ tipo @done(18-10-29 11:19)
                 ✔ fecha (yyyy-mm-dd o yyyy-m-d) @done(18-10-29 11:19)
+
+        ☐ Validacion estructura
+                ☐ Acta
+                    ✔ get @done(18-10-30 10:25)
+                        OK-mensaje bien
+                        BAD-mensaje bien
+                    ✔ insert @done(18-10-30 10:37)
+                        OK-mensaje bien
+                        BAD-mensaje bien
+                    ✔ delete @done(18-10-30 10:41)
+                        OK-mensaje bien
+                        BAD-mensaje bien
+                    ✔ update @done(18-10-30 10:45)
+                        OK-mensaje bien
+                        BAD-mensaje bien
+        ☐ Si la accion no existe enviar un mensaje de error
         ☐ Hacer factosy_sql_action
 
         ☐ Crear un metodo de envio de mensajes correctos con la respuesta de la sql y otro para mensajes de error

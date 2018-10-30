@@ -9,10 +9,16 @@ module.exports.factory_action = function (query, body) {
             factory_tables(query.action, query.table, query);
             break;
         case actions.update:
+            query_array(body);
+            factory_tables(query.action, query.table, body);
             break;
         case actions.delete:
+            query_array(body);
+            factory_tables(query.action, query.table, body);
             break;
         case actions.insert:
+            query_array(body);
+            factory_tables(query.action, query.table, body);
             break;
         default:
             break;
