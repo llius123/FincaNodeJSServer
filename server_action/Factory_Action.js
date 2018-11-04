@@ -8,7 +8,7 @@ module.exports.factory_action = function (query, body) {
     switch (query.actions) {
         case actions.get:
             error  = query_array(query);
-            if(error.msg !== null){
+            if(error.msg === null){
                 factory_tables(query.actions, query.table, query);
             }else{
                 enviarError(error);

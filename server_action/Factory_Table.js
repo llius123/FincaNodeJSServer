@@ -7,7 +7,7 @@ module.exports.factory_tables = function (actions,table,data) {
             consulta(factory_sql_action(actions, tables.actas, data));
             break;
         case tables.factura:
-
+            consulta(factory_sql_action(actions, tables.factura, data))
             break;
         case tables.incidencia:
 

@@ -1,6 +1,6 @@
 var { validacion_model } = require('../server_models/Model');
 
-var regexOnlyNumber = /^[0-9]*$/;
+var regexOnlyNumber = /^$|^[0-9]*$/;
 var regexDate = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
 
 var arrayFinal = [];
@@ -18,6 +18,7 @@ module.exports.validator = function (data) {
                 break;
             case validacion_model.fecha:
                 arrayFinal.push(regexTest(obj, regexDate, validacion_model.fecha));
+                break;
             default:
                 break;
         }
@@ -32,9 +33,9 @@ module.exports.validator = function (data) {
 
 function regexTest(obj, regex, error) {
     res = [];
-    if (regex.test(obj)) {
+    if (regex.test(obj) && obj.length !== 0) {
         res = [regex.test(obj)];
-    } else {
+    }else {
         res = [msgError(error)];
     }
     return res;

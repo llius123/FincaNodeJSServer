@@ -16,7 +16,9 @@ TODO:
         https://www.npmjs.com/package/express-mysql-session
 
     Que hacer:
-        ☐ Res.end() y res.send()
+        ☐ Añadir mas validaciones con sus expresiones regulares
+        ☐ Modificar las expresiones regulares para que no se tragen los espacion y las variables vacias
+        ✔ Res.end() y res.send() @done(18-11-04 18:07)
             Cuando hago el res.send() se supone que la conexion se cierra por lo tanto no hace falta el res.end() de despues.
             +info--> https://stackoverflow.com/questions/29555290/what-is-the-difference-between-res-end-and-res-send
         ☐ Modificar la api para que sea rest
@@ -51,6 +53,9 @@ TODO:
                     ✔ update @done(18-10-30 10:45)
                         OK-mensaje bien
                         BAD-mensaje bien
+                ☐ Factura
+                    ✔ Get @done(18-11-04 17:53)
+                    ☐ Insert
         ☐ Si la accion no existe enviar un mensaje de error
         ☐ Hacer factosy_sql_action
         ☐ Revisar Facotry_Sql_Action porque me da la sensacion de que sobra.
