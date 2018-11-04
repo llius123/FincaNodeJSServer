@@ -1,10 +1,10 @@
 var { tables } = require('../server_models/Model');
 var {factory_sql_action} = require('./sql_query/Factory_Sql_Action');
 
-module.exports.factory_tables = function (action,table,data) {
+module.exports.factory_tables = function (actions,table,data) {
     switch (table) {
         case tables.actas:
-            consulta(factory_sql_action(action, tables.actas, data));
+            consulta(factory_sql_action(actions, tables.actas, data));
             break;
         case tables.factura:
 
@@ -36,7 +36,6 @@ function consulta(sql){
     connection.query(sql , function (error, results, fields) {
         if (error) getRes().send(error);
         getRes().send(results);
-        getRes().end();
     })
     //connection.end();
 }

@@ -16,6 +16,11 @@ TODO:
         https://www.npmjs.com/package/express-mysql-session
 
     Que hacer:
+        ☐ Res.end() y res.send()
+            Cuando hago el res.send() se supone que la conexion se cierra por lo tanto no hace falta el res.end() de despues.
+            +info--> https://stackoverflow.com/questions/29555290/what-is-the-difference-between-res-end-and-res-send
+        ☐ Modificar la api para que sea rest
+            Tendre 1 o 2 variables de entrada y los datos vendran por body
         ✔ Query_Arrays @done(18-10-29 10:46)
         Me saca en un arraylist todos los parametros que necesto validar
         ☐ Validator
@@ -25,6 +30,13 @@ TODO:
                 ✔ tipo @done(18-10-29 11:19)
                 ✔ fecha (yyyy-mm-dd o yyyy-m-d) @done(18-10-29 11:19)
 
+        Metodos genericos:
+            ✔ Get @done(18-11-04 16:56)
+                action=get
+                table=la que sea
+                id=el que sea
+            ☐ Put
+                Ojo con postman, cuando haya que enviar algo desde postamn con body hayq ue activar el x-www-form-url-encoded
         Validacion estructura:
                 ✔ Acta @done(18-10-30 10:53)
                     ✔ get @done(18-10-30 10:25)

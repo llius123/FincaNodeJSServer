@@ -6,7 +6,7 @@ var actions = {
 }
 
 var tables = {
-    actions: 'actions',
+    action: 'action',
     usuario: 'usuario',
     actas: 'actas',
     factura: 'factura',

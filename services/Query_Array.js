@@ -8,9 +8,13 @@ module.exports.query_array = function (data) {
     var array = [];
     var object = [];
     array = [];
+    errorMsg = {
+        status: 200,
+        msg: null
+    }
     Object.entries(data).forEach(
         ([key, value]) => {
-            if (key !== 'action' && key !== 'table') {
+            if (key !== 'actions' && key !== 'table') {
                 object = [key, value]
                 array.push(object);
             }
@@ -28,8 +32,6 @@ module.exports.query_array = function (data) {
             status: 500,
             msg: arrayMsgError
         }
-        var res = getRes();
-        res.send(errorMsg);
-        res.end();
     }
+    return errorMsg;
 }

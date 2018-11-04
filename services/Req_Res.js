@@ -9,6 +9,6 @@ module.exports.getReq = function(){
 }
 
 module.exports.setReqRes = function(request,response){
-    res = request;
+    req = request;
     res = response;
 }

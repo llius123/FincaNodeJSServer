@@ -1,29 +1,42 @@
 var { actions } = require('../server_models/Model');
 var { query_array } = require('../services/Query_Array');
 var { factory_tables } = require('../server_action/Factory_Table');
-var { getRes } = require('../services/Req_Res');
+var { getRes, getReq } = require('../services/Req_Res');
 
 module.exports.factory_action = function (query, body) {
-    switch (query.action) {
+    var error = '';
+    switch (query.actions) {
         case actions.get:
-            query_array(query);
-            factory_tables(query.action, query.table, query);
+            error  = query_array(query);
+            if(error.msg !== null){
+                factory_tables(query.actions, query.table, query);
+            }else{
+                enviarError(error);
+            }
             break;
         case actions.update:
-            query_array(body);
-            factory_tables(query.action, query.table, body);
+            error = query_array(query);
+            if(error.msg === null){
+                error = query_array(body);
+                if(error.msg === null){
+                    factory_tables(query.actions, query.table, body);
+                }else{
+                    enviarError(error);
+                }
+            }else{
+                enviarError(error);
+            }
             break;
         case actions.delete:
-            query_array(body);
-            factory_tables(query.action, query.table, body);
             break;
         case actions.insert:
-            query_array(body);
-            factory_tables(query.action, query.table, body);
             break;
         default:
-            getRes().send({ status: 500, msg: `No existe la accion: ${query.action} ` });
-            getRes().end();
+            getRes().send({ status: 500, msg: `No existe la accion: ${query.actions} ` });
             break;
     }
+}
+
+function enviarError(data){
+    getRes().send(data);
 }
