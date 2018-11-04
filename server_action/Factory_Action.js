@@ -28,8 +28,25 @@ module.exports.factory_action = function (query, body) {
             }
             break;
         case actions.delete:
+            error = query_array(query);
+            if(error.msg === null){
+                factory_tables(query.actions, query.table, query)
+            }else{
+                enviarError(error);
+            }
             break;
         case actions.insert:
+            error = query_array(query);
+            if (error.msg === null) {
+                error = query_array(body);
+                if (error.msg === null) {
+                    factory_tables(query.actions, query.table, body);
+                } else {
+                    enviarError(error);
+                }
+            } else {
+                enviarError(error);
+            }
             break;
         default:
             getRes().send({ status: 500, msg: `No existe la accion: ${query.actions} ` });
