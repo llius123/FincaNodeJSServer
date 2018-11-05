@@ -19,41 +19,56 @@ Iniciar el servidor
 ```sh
 npm run server
 ```
+> Iniciado en localhost:3000
 
 Iniciar el servidor en modo debug
 ```sh
 npm run debug
 ```
 
+>Debugear con Vscode
+
+>Debuggear con chrome
+
 ## Historial de cambios
 
 * 0.3.0
-    * Athentication(por hacer)
+
+    ❌ Athentication.
 * 0.2.0
-    * Consultas espeficias que necesite cada tabla.
+
+    ❌ Consultas espeficias que necesite cada tabla.
 * 0.1.0
-    * Consultas basicas y genericas(get/insert/delete/update).
+    
+    ✔️ Consultas basicas y genericas(get/insert/delete/update).
 
-## Meta
 
-Jesus Berisa Nuñez – [@jesus_llius] https://twitter.com/jesus_llius
+## Estructura
+
+
+![](https://raw.githubusercontent.com/llius123/NodeJS_Server_Mysql/master/estructura_database.png)
+
+## Mejoras/Fallos
+
+Forma de contacto:
+
+[Twitter](https://twitter.com/jesus_llius)
+
+[Github](https://github.com/llius123/NodeJS_Server_Mysql)
+
+## Api
+
+| Metodos  |
+| ------------- |
+| get  |
+| insert  |
+| delete  |
+| update  |
+
+## License
+
+Creador: Jesus Berisa Nuñez.
+
+Mantenido: Jesus Berisa Nuñez.
 
 Distributed under the MIT license.
-
-[https://github.com/llius123/NodeJS_Server_Mysql]
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki

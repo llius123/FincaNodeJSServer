@@ -68,6 +68,7 @@ var validacion_model = {
     fecha: 'fecha',
     tipo: 'tipo',
     email: 'email'
+    
 }
 
 var errorMsg = {

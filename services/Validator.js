@@ -2,6 +2,7 @@ var { validacion_model } = require('../server_models/Model');
 
 var regexOnlyNumber = /^$|^[0-9]*$/;
 var regexDate = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
+var regexEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
 var arrayFinal = [];
 var res = [];
@@ -19,12 +20,14 @@ module.exports.validator = function (data) {
             case validacion_model.fecha:
                 arrayFinal.push(regexTest(obj, regexDate, validacion_model.fecha));
                 break;
+            case validacion_model.email:
+                arrayFinal.push(regexTest(obj, regexEmail, validacion_model.email));
             default:
                 break;
         }
     }
-    for(i = 0; i< arrayFinal.length; i++){
-        if(arrayFinal[i][0] !== true){
+    for (i = 0; i < arrayFinal.length; i++) {
+        if (arrayFinal[i][0] !== true) {
             return arrayFinal;
         }
     }
@@ -33,9 +36,9 @@ module.exports.validator = function (data) {
 
 function regexTest(obj, regex, error) {
     res = [];
-    if (regex.test(obj) && obj.length !== 0) {
+    if (regex.test(obj)) {
         res = [regex.test(obj)];
-    }else {
+    } else {
         res = [msgError(error)];
     }
     return res;
