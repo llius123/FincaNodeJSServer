@@ -22,16 +22,18 @@ module.exports.query_array = function (data) {
     );
     var resultadoValidator = validator(array);
     var arrayMsgError = [];
-    if (resultadoValidator !== true){       
+    if (resultadoValidator !== true){
         for (i = 0; i < resultadoValidator.length; i++){
             if (resultadoValidator[i][0] !== true){
                 arrayMsgError.push(resultadoValidator[i][0]);
             }
         }
+
         errorMsg = {
             status: 500,
             msg: arrayMsgError
         }
+        return errorMsg;
     }
-    return errorMsg;
+    return true;
 }

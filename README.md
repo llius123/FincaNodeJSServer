@@ -2,7 +2,7 @@
 > BackEnd para mi proyecto Finca
 
 
-BackEnd que me permite recivir peticiones del cliente y devolver datos de la base de datos.
+BackEnd que me permite recibir peticiones del cliente y devolver datos de la base de datos.
 
 ![](header.png)
 

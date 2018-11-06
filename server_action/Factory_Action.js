@@ -3,49 +3,44 @@ var { query_array } = require('../services/Query_Array');
 var { factory_tables } = require('../server_action/Factory_Table');
 var { getRes, getReq } = require('../services/Req_Res');
 
+
 module.exports.factory_action = function (query, body) {
     var error = '';
     switch (query.actions) {
         case actions.get:
-            error  = query_array(query);
-            if(error.msg === null){
+            if (query_array(query) === true) {
                 factory_tables(query.actions, query.table, query);
-            }else{
-                enviarError(error);
+            } else {
+                enviarErrorMsg(query_array(query));
             }
             break;
         case actions.update:
-            error = query_array(query);
-            if(error.msg === null){
-                error = query_array(body);
-                if(error.msg === null){
+            if (query_array(query) === true) {
+                if (query_array(body) === true) {
                     factory_tables(query.actions, query.table, body);
-                }else{
-                    enviarError(error);
+                } else {
+                    enviarErrorMsg(query_array(body));
                 }
             }else{
-                enviarError(error);
+                enviarErrorMsg(query_array(query));
             }
             break;
         case actions.delete:
-            error = query_array(query);
-            if(error.msg === null){
-                factory_tables(query.actions, query.table, query)
+            if (query_array(query) === true){
+                factory_tables(query.actions, query.table, query);
             }else{
-                enviarError(error);
+                enviarErrorMsg(query_array(query));
             }
             break;
         case actions.insert:
-            error = query_array(query);
-            if (error.msg === null) {
-                error = query_array(body);
-                if (error.msg === null) {
+            if (query_array(query) === true){
+                if (query_array(body) === true){
                     factory_tables(query.actions, query.table, body);
-                } else {
-                    enviarError(error);
+                }else{
+                    enviarErrorMsg(query_array(body));
                 }
-            } else {
-                enviarError(error);
+            }else{
+                enviarErrorMsg(query_array(query));
             }
             break;
         default:
@@ -54,6 +49,6 @@ module.exports.factory_action = function (query, body) {
     }
 }
 
-function enviarError(data){
-    getRes().send(data);
+function enviarErrorMsg(error) {
+    getRes().send(error);
 }
